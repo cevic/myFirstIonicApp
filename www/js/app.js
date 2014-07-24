@@ -76,8 +76,27 @@ angular.module('hciApp', ['ionic', 'hciApp.controllers', 'hciApp.services',
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('hciApp', ['ionic', 'hciApp.controllers', 'hciApp.services'])
-    .constant('FORECASTIO_KEY', 'e5fb549e22c9c3c729ce5a5ec0c6dff7')
+var app = angular.module('hciApp', ['ionic', 'hciApp.controllers', 'hciApp.services']);
+var PhoneGapInit = function () {
+    this.boot = function () {
+        angular.bootstrap(document, ['hciApp']);
+    };
+
+    if (window.phonegap !== undefined) {
+        document.addEventListener('deviceready', function() {
+            this.boot();
+        });
+    } else {
+        console.log('PhoneGap not found, booting Angular manually');
+        this.boot();
+    }
+};
+
+angular.element(document).ready(function() {
+    new PhoneGapInit();
+});
+
+app.constant('FORECASTIO_KEY', 'e5fb549e22c9c3c729ce5a5ec0c6dff7')
     .constant('FLICKR_API_KEY', '504fd7414f6275eb5b657ddbfba80a2c')
     .constant('AWS_ACCESS_KEY', 'AKIAIIXJM3G6BRX3W4WQ')
     .constant('AWS_SECRETE_KEY', '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')
