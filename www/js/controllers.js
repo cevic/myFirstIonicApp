@@ -1,6 +1,6 @@
-var appCtrl = angular.module('hciApp.controllers', []);
+var appCtrl = angular.module('starter.controllers', []);
 
-appCtrl.controller('MenuCtrl', function($scope, $ionicModal, $timeout) {
+appCtrl.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
 
