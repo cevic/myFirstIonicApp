@@ -52,6 +52,14 @@ appCtrl.controller('PlaylistCtrl', function($scope, $stateParams) {
 
 appCtrl.controller('PlaylistsCtrl', ['$scope', 'AWSService', 'MyService', '$timeout', '$ionicLoading', '$filter',
     function($scope, AWSService, MyService, $timeout, $ionicLoading, $filter){
+        $scope.playlists = [
+            { title: 'Reggae', id: 1 },
+            { title: 'Chill', id: 2 },
+            { title: 'Dubstep', id: 3 },
+            { title: 'Indie', id: 4 },
+            { title: 'Rap', id: 5 },
+            { title: 'Cowbell', id: 6 }
+        ];
         /*set the funcion for showing and hiding loading screen*/
         $scope.showLoading = function () {
             $scope.show = $ionicLoading.show({
