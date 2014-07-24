@@ -20,9 +20,6 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
         });
     })
 
-    .config(function(AWSServiceProvider){
-        AWSServiceProvider.setKeys('AKIAIIXJM3G6BRX3W4WQ', 'G9ffD62jLdSLgMCzJbtjQudOf3Fj3cztP8E0Czac')
-    })
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 

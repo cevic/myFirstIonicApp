@@ -61,35 +61,5 @@
         };
         return service*/
     }]);
-
-    appServ.provider('AWSService', function() {
-        var self = this;
-        AWS.config.region = 'eu-west-1';
-        /*set defaults*/
-        self.config = null;
-
-        self.setKeys = function(accesskey, secretekey) {
-            var config = {
-                accessKeyId: accesskey,
-                secretAccessKey: secretekey
-            };
-            return self.config = config;
-        };
-
-        self.$get = function($q) {
-            var params = self.config,
-                deferred = $q.defer();
-            return {
-                awsInstance: function(){
-                    if(!s3Obj){
-                        var s3Obj = AWS.config.update(params);
-                    }
-                    deferred.resolve(s3Obj);
-                    return deferred.promise;
-                }
-            }
-        }
-    });
-
 })();
 
