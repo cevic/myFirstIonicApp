@@ -1,6 +1,6 @@
-angular.module('starter.controllers', [])
+var appCtrl = angular.module('hciApp.controllers', []);
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+appCtrl.controller('MenuCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -31,9 +31,9 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
-})
+});
 
-.controller('PlaylistsCtrl', function($scope) {
+appCtrl.controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -44,5 +44,5 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
+appCtrl.controller('PlaylistCtrl', function($scope, $stateParams) {
+});

@@ -8,22 +8,34 @@
   </ion-pane>
 
   <ion-side-menu side="left">
-    <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+    <header class="bar bar-header bar-calm">
+      <h1 class="title">Go to</h1>
     </header>
     <ion-content class="has-header">
       <ion-list>
+          <ion-item nav-clear menu-close href="#/app/home">
+              Word for Today
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/todo">
+              Podcasts
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/findUs">
+              Contact
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/photoGal">
+              Photos
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/send_email">
+              Send a message
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/contactMessages">
+              Messages
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/intro">
+              Intro Page
+          </ion-item>
         <ion-item nav-clear menu-close ng-click="login()">
           Login
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
         </ion-item>
       </ion-list>
     </ion-content>
