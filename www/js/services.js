@@ -10,7 +10,7 @@
         return;
     };
 
-    var appServ = angular.module('hciApp.services', ['ngResource']);
+    var appServ = angular.module('hciApp.services', []);
 
     appServ.service('MyService', ['$q', 'AWSService', '$cacheFactory', function($q, AWSService, $cacheFactory) {
         var self = this,
